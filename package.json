@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": { 
-    "node" : "12.18.1"
+  "engines": {
+    "node": "12.18.1"
   },
-  
   "scripts": {
     "start": "set NODE_ENV=production&& node index.js",
     "test": "jest --verbose --forceExit  --runInBand "
@@ -27,7 +26,6 @@
     "joi-objectid": "^3.0.1",
     "joi-password-complexity": "^4.2.0",
     "jsonwebtoken": "^8.5.1",
-    "loadash": "^1.0.0",
     "lodash": "^4.17.19",
     "moment": "^2.27.0",
     "mongoose": "^5.9.25",
