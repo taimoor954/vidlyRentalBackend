@@ -1,0 +1,11 @@
+winston is a npm package manager use to log errrors
+winston objct has a transport. transport is a storage device for our logs {logfile.log}
+there are 3 kind of transport
+1 console
+2 http
+3 file
+there are some other as well which can be use using a driver
+mongodb
+couchdb
+redis
+loggly //v popular

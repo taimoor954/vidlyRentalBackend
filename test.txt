@@ -1,0 +1,80 @@
+const request  = require('supertest');
+const http  = require('http');
+const {app} = require('../../index')
+let server;
+const {Genre} = require("../../Models/genre");
+const {Register} = require('../../Models/Register');
+
+describe('/api/Genre' , () => {
+  beforeEach(async () =>  {
+    server = await import('../../index');
+    server.default()
+
+    done()
+  })
+   afterEach(async () => {
+      server.close()
+      await Genre.remove({})
+    }) 
+
+  
+  
+  describe('GET ALL GERNES' , () => {
+    it('should return all genres ' , async () => {
+    await Genre.collection.insertMany([{name : 'genre1'},
+      {name : 'genre2'},
+      {name : 'genre3'}]);
+   const response =  await  request(server).get('/api/Genre')
+   
+   expect(response.status).toBe(200)
+   expect(response.body.length).toBe(3)
+   expect(response.body.some(g => g.name == 'genre1')).toBeTruthy()
+   expect(response.body.some(g => g.name == 'genre2')).toBeTruthy()
+   expect(response.body.some(g => g.name == 'genre3')).toBeTruthy()
+    })
+
+  })
+
+  describe('GET Genre:/id ', () => {
+    it('should return 200 when valid is passed' , async () => {
+      const genre = new Genre({name  : 'genre1'});
+      await genre.save();
+      const response  = await request(server).get('/api/Genre/'+genre._id)
+      expect(response.status).toBe(200)
+      expect(response.body).toHaveProperty('name', genre.name)
+  })
+
+  it('should return 404 when invalid is passed' , async () => {
+    const response = await request(server).get('/api/Genre/2')
+    expect(response.status).toBe(404)  
+  
+  }, )
+
+
+
+
+  })
+
+  describe('Post genre / ', () => {
+    it('should return a 401 if client is not logged in' , async () => {
+    const res =  await request(server)
+     .post('/api/Genre')
+     .send({name : 'genre1'})
+
+     expect(res.status).toBe(404)
+    })
+
+    it('should return 400 when invalid genre is less than 5 charac.' , async () => {
+      const token = new Register().getAuthToken();
+      const response =  await request(server).
+      post('/api/Genre')
+      .set('x-auth-token', token)
+      .send({name : '1234'});
+
+      expect(response.status).toBe(400)
+
+    } )
+
+
+  })
+})

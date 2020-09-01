@@ -1,0 +1,3 @@
+    "start": "set NODE_ENV=production&& node index.js",
+in package.json set this line inside scripts object and 
+also there must be no space between "NODE_ENV=production" and "&&"

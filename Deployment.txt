@@ -1,0 +1,19 @@
+Deployment is possible in 2 ways
+1)PAAS platform as a service
+1)Docker
+PAAS is a better optiob if you dont want to get involve in infrastructure.
+PAAS is a better optiob if you dont want to get involve in server, load balancers, reverser proxiexs 
+or restating your app on a crash
+
+PAAS has diffrent options like
+GOogle Cloud
+Heroku
+Azure
+AWS
+
+heroku is better to get started with 
+comprehensive featurues
+better documentation
+
+if you want more control over your Deployment, if you want to Deployment on your
+own webserver then docker is betterx

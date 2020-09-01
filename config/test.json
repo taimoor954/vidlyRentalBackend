@@ -1,0 +1,4 @@
+{
+    "name" : "Vidyle - Test",
+    "db" : "mongodb://localhost/Rental-Movies_test"
+}
