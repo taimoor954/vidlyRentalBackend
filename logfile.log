@@ -1079,3 +1079,9 @@
 {"message":"Connected to db mongodb://localhost/Rental-Movies","level":"info"}
 {"message":"Listening at 3000 ","level":"info"}
 {"message":"Connected to db mongodb://localhost/Rental-Movies","level":"info"}
+{"message":"Listening at 3000 ","level":"info"}
+{"message":"Connected to db mongodb://localhost/Rental-Movies","level":"info"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":3000,"level":"error","message":"listen EADDRINUSE: address already in use :::3000 listen EADDRINUSE: address already in use :::3000","stack":"Error: listen EADDRINUSE: address already in use :::3000\n    at Server.setupListenHandle [as _listen2] (net.js:1313:16)\n    at listenInCluster (net.js:1361:12)\n    at Server.listen (net.js:1447:7)\n    at Function.listen (E:\\Sir Ahsan Web Dev\\Module2\\Node.js\\MoshHamedani\\MongoDB\\VidyleRental\\node_modules\\express\\lib\\application.js:618:24)\n    at Object.<anonymous> (E:\\Sir Ahsan Web Dev\\Module2\\Node.js\\MoshHamedani\\MongoDB\\VidyleRental\\index.js:21:19)\n    at Module._compile (internal/modules/cjs/loader.js:1138:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)\n    at Module.load (internal/modules/cjs/loader.js:986:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:879:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)\n    at internal/main/run_main_module.js:17:47"}
+{"message":"Connected to db mongodb://localhost/Rental-Movies","level":"info"}
+{"message":"Listening at 3000 ","level":"info"}
+{"message":"Connected to db mongodb://localhost/Rental-Movies","level":"info"}
